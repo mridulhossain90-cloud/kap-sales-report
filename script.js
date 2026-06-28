@@ -13,7 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const loginButton = document.querySelector("button");
+const loginButton = document.getElementById("loginBtn");
 
 loginButton.addEventListener("click", async function () {
   const email = document.getElementById("email").value.trim();
@@ -26,7 +26,9 @@ loginButton.addEventListener("click", async function () {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    alert("Login successful");
+
+    document.getElementById("loginSection").style.display = "none";
+    document.getElementById("dashboardSection").style.display = "block";
   } catch (error) {
     alert("Login failed. Please check email and password.");
   }
