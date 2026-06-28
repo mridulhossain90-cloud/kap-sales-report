@@ -6,6 +6,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "vite": "latest"
+    "vite": "latest",
+    "firebase": "latest"
   }
 }
