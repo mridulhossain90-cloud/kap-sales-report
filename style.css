@@ -1,70 +1,167 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #1b5e20, #43a047);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 420px;
-    padding: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f3f6f4;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 420px;
+  margin: auto;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container h1 {
+  color: #1b5e20;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.container h2 {
+  color: #444;
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: #1b5e20;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  padding: 13px;
+  background: #1b5e20;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2e7d32;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.topbar {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.topbar h1 {
+  color: #1b5e20;
+  font-size: 24px;
+}
+
+.topbar p {
+  color: #555;
+  margin-top: 5px;
+}
+
+.logout {
+  background: #c62828;
+}
+
+.logout:hover {
+  background: #b71c1c;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.section {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.section button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  background: #1b5e20;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 9px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
     text-align: center;
   }
-  
-  h1 {
-    color: white;
-    font-size: 28px;
-    margin-bottom: 8px;
+
+  .menu {
+    grid-template-columns: 1fr;
   }
-  
-  h2 {
-    color: #e8f5e9;
-    font-size: 20px;
-    margin-bottom: 25px;
+
+  .dashboard {
+    padding: 12px;
   }
-  
-  .card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  table {
+    font-size: 12px;
   }
-  
-  .card h3 {
-    margin-bottom: 20px;
-    color: #1b5e20;
-    font-size: 24px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 14px;
-    background: #1b5e20;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #2e7d32;
-  }
+}
