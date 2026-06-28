@@ -1,5 +1,11 @@
 {
-    "name": "kap-sales-report",
-    "private": true,
-    "version": "1.0.0"
+  "name": "kap-sales-report",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "vite": "latest"
   }
+}
